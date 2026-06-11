@@ -14,7 +14,7 @@ The app supports loading image volumes, ground-truth masks, and prediction masks
 - Toggle green ground-truth and red prediction overlays.
 - Compute per-class Dice, IoU, precision, and recall.
 - Review results in both a table and bar chart.
-- Optionally run ONNX or PyTorch model inference to generate a prediction mask.
+- Model inference panel is included but currently under construction.
 
 ## Installation
 
@@ -42,9 +42,7 @@ Basic evaluation workflow:
 
 1. Click **Load Image** and select a NIfTI file. If you cancel the file dialog, the app will offer a DICOM folder picker.
 2. Click **Load Ground Truth** and load the reference segmentation mask.
-3. Choose the prediction source:
-   - **Load mask file**: load an existing prediction mask.
-   - **Run model inference**: load an ONNX or PyTorch model and run it on the image volume.
+3. Choose **Load mask file** and load an existing prediction mask.
 4. Click **Evaluate**.
 5. Review the per-class metrics in the results table or chart.
 
@@ -52,19 +50,21 @@ Ground truth and prediction masks must have the same shape. Metrics are computed
 
 ## Model Inference
 
-The inference panel supports:
+Model inference is currently under construction. The GUI includes an inference panel for planned ONNX and PyTorch support, but the recommended workflow is to evaluate an existing prediction mask file.
+
+Planned inference support includes:
 
 - ONNX models via `onnxruntime`
 - PyTorch models via `torch.load`
 - Z-score or min-max input normalization
 
-Current model input expectation:
+Planned model input expectation:
 
 ```text
 (1, 1, H, W, D)
 ```
 
-If the model returns a 5D tensor shaped like `(1, C, H, W, D)`, the app applies `argmax` across the class channel. Otherwise, it treats the first output item as the predicted label volume.
+If the model returns a 5D tensor shaped like `(1, C, H, W, D)`, the app is expected to apply `argmax` across the class channel. Otherwise, it will treat the first output item as the predicted label volume.
 
 ## Metrics
 
