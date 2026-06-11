@@ -1,0 +1,7 @@
+numpy==2.4.6
+PyQt6==6.11.0
+matplotlib==3.10.9
+pydicom==3.0.2
+nibabel==5.4.2
+onnxruntime==1.26.0
+torch==2.12.0
