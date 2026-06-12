@@ -6,7 +6,7 @@ from PyQt6.QtWidgets import QApplication
 ROOT = Path(__file__).resolve().parent
 sys.path.insert(0, str(ROOT.parent))
 
-from segmentation_eval.gui.app import MainWindow
+from gui.app import MainWindow
 
 
 def main():

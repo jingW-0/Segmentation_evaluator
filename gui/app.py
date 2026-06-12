@@ -9,8 +9,8 @@ from .file_panel import FilePanel
 from .viewer_panel import ViewerPanel
 from .results_panel import ResultsPanel
 from .inference_panel import InferencePanel
-from ..metrics.overlap import compute_metrics
-from ..utils.label_map import get_labels_from_volume, build_label_names
+from  metrics.overlap import compute_metrics
+from  utils.label_map import get_labels_from_volume, build_label_names
 
 
 class MainWindow(QMainWindow):

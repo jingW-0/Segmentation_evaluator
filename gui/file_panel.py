@@ -6,8 +6,8 @@ from PyQt6.QtWidgets import (
 )
 from PyQt6.QtCore import pyqtSignal
 
-from ..io.nifti_reader import load_nifti
-from ..io.dicom_reader import load_dicom_series
+from iofile.nifti_reader import load_nifti
+from iofile.dicom_reader import load_dicom_series
 
 
 def _load_volume(parent) -> np.ndarray | None:

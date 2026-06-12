@@ -6,7 +6,7 @@ from PyQt6.QtWidgets import (
 )
 from PyQt6.QtCore import QThread, pyqtSignal
 
-from ..inference.preprocessing import normalize_zscore, normalize_minmax
+from inference.preprocessing import normalize_zscore, normalize_minmax
 
 
 class _InferenceWorker(QThread):
