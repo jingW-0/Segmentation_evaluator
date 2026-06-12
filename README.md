@@ -94,5 +94,4 @@ segmentation_eval/
 ## Notes
 
 - NIfTI volumes are reoriented to canonical RAS orientation before display.
-- DICOM series are sorted by `InstanceNumber`.
 - This tool is intended for local evaluation and visualization workflows.
